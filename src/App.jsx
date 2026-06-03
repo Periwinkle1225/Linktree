@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import './App.css'
 import { Toggle } from './components/Toggle';
-import { useLocalStorage } from "usehooks-ts"; //From use-local-storage didnt work for me so i had to use usehooks-ts
+import { useLocalStorage } from "usehooks-ts"; //From use-local-storage didnt work for me so i had to use
+import profile from "./assets/Profile.jpg";
+import linkedIn from "./assets/linkedin-icon-free.png"
+import github from "./assets/github.png";
 
 const user = {
   name: 'Ricardo Losoya',
   about: 'Computer science student',
-  imagePath: 'src/assets/Profile.jpg',
+  imagePath: profile,
   imageSize: 90,
-  linkedInImage: 'src/assets/linkedin-icon-free.png',
+  linkedInImage: linkedIn,
   linkedInLink: 'https://www.linkedin.com/in/ricardo-losoya-478507280/',
-  githubImage: 'src/assets/github.png',
+  githubImage: github,
   githubLink: 'https://github.com/Periwinkle1225'
 };
 
