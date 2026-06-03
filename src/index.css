@@ -1,0 +1,39 @@
+:root {
+  --primary: darkseagreen;
+  --secondary: #e6f8d1;
+  --text: #84B179;
+  --toggle-bg: #f0eb9d;
+  --toggle-fg: #ffd000;
+}
+body {
+  margin: 0px;
+}
+.App {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--primary);
+  color: var(--secondary);
+  transition: background-color 0.25s ease-in-out;
+}
+
+.links div {
+  background-color: var(--secondary);
+  transition: background-color 0.25s ease-in-out;
+
+}
+
+.links a {
+  color: var(--text);
+  transition: background-color 0.25s ease-in-out;
+
+}
+
+[data-theme="dark"] {
+  --primary: #222831;
+  --secondary: #393E46;
+  --toggle-bg: #283452;
+  --toggle-fg: #00a6ff;
+}

@@ -1,0 +1,41 @@
+.avatar {
+  border-radius: 50%;
+}
+
+.header {
+  display: flex;
+  height: 100px;
+  align-items: center;
+}
+
+.profile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+
+.links div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  height: 100px;
+  width: 100%;
+  margin: 15px;
+  border-radius: 10px;
+}
+
+.links h1 {
+  margin-right: auto;
+}
