@@ -5,21 +5,25 @@ import { useLocalStorage } from "usehooks-ts"; //From use-local-storage didnt wo
 import profile from "./assets/Profile.jpg";
 import linkedIn from "./assets/linkedin-icon-free.png"
 import github from "./assets/github.png";
+import resume from "./assets/resume.png"
 
 const user = {
   name: 'Ricardo Losoya',
   about: 'Computer science student',
+};
+
+const images = {
   imagePath: profile,
   imageSize: 90,
   linkedInImage: linkedIn,
-  linkedInLink: 'https://www.linkedin.com/in/ricardo-losoya-478507280/',
   githubImage: github,
-  githubLink: 'https://github.com/Periwinkle1225'
+  resumeImage: resume
 };
 
-
-
-
+const links = {
+  linkedInLink: 'https://www.linkedin.com/in/ricardo-losoya-478507280/',
+  githubLink: 'https://github.com/Periwinkle1225'
+};
 
 export default function MyApp() {
   const [isDark, setIsDark] = useLocalStorage("isDark", false);
@@ -33,11 +37,11 @@ export default function MyApp() {
     <div className="profile">
       <img
         className="avatar"
-        src={user.imagePath}
+        src={images.imagePath}
         alt={'Photo of ' + user.name}
         style={{
-          width: user.imageSize,
-          height: user.imageSize
+          width: images.imageSize,
+          height: images.imageSize
         }}
         />
         <h1>{user.name}</h1>
@@ -46,22 +50,31 @@ export default function MyApp() {
 
       <div className="links">
         <div>
-        <img src={user.linkedInImage} 
+        <img src={images.linkedInImage} 
         style={{
-          width: user.imageSize,
-          height: user.imageSize
+          width: images.imageSize,
+          height: images.imageSize
         }}
         />
-        <h1><a href={user.linkedInLink}>Check out my LinkedIn profile!!!</a></h1>
+        <h1><a href={links.linkedInLink}>Check out my LinkedIn profile!!!</a></h1>
         </div>
         <div>
-        <img src={user.githubImage} 
+        <img src={images.githubImage} 
         style={{
-          width: user.imageSize,
-          height: user.imageSize
+          width: images.imageSize,
+          height: images.imageSize
         }}
         />
-        <h1><a href={user.githubLink}>Check out my GitHub profile!!!</a></h1>
+        <h1><a href={links.githubLink}>Check out my GitHub profile!!!</a></h1>
+        </div>
+        <div>
+        <img src={images.resumeImage} 
+        style={{
+          width: images.imageSize,
+          height: images.imageSize
+        }}
+        />
+        <h1></h1>
         </div>
       </div>
     </div>

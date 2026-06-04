@@ -20,7 +20,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 80%;
+  width: 60%; /*Div containing the all links divs is 60% of screen*/
   margin: auto;
   margin-top: 10px;
 }
@@ -31,11 +31,18 @@
   justify-content: center;
   gap: 10px;
   height: 100px;
-  width: 100%;
+  width: 100%; /*Divs inside of Links div take up 100% width*/
   margin: 15px;
   border-radius: 10px;
+  
 }
 
 .links h1 {
   margin-right: auto;
+}
+
+.links div:hover {
+  filter: brightness(110%); /*brightens image 10% when hovered over.*/
+  transform: scale(1.05);
+  transition: transform 250ms;
 }
