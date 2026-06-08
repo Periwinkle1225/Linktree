@@ -1,7 +1,7 @@
 import './App.css'
 import { Toggle } from './components/Toggle';
 import { useLocalStorage } from "usehooks-ts"; //From use-local-storage didnt work for me so i had to use
-import profile from "./assets/Profile.jpg";
+import profile from "./assets/profile.png";
 import linkedIn from "./assets/linkedin-icon-free.png"
 import github from "./assets/github.png";
 import resume from "./assets/resume.png"
@@ -9,7 +9,7 @@ import { useEffect } from "react";
 
 const user = {
   name: 'Ricardo Losoya',
-  about: 'Computer science student cross enrolled at Hartnell college and Csumb',
+  about: 'Computer Science student cross-enrolled at Hartnell College and California State University, Monterey Bay',
   location: 'Salinas, CA',
   pNumber: '(831) 905-7140',
   email: 'ricardolosoya1@gmail.com'
@@ -70,7 +70,7 @@ export default function MyApp() {
           height: images.imageSize2
         }}
         />
-        <h1>Check out my LinkedIn!!!</h1>
+        <h1>LinkedIn</h1>
         </div>
         <div className="url">
         <p>{links.linkedInLink}</p>
@@ -85,7 +85,7 @@ export default function MyApp() {
           height: images.imageSize2
         }}
         />
-        <h1>Check out my Github!!!</h1>
+        <h1>Github</h1>
         </div>
         <div className="url">
         <p>{links.githubLink}</p>
@@ -100,7 +100,7 @@ export default function MyApp() {
           height: images.imageSize2
         }}
         />
-        <h1>Check out my Resume!!!</h1>
+        <h1>Resume</h1>
         </div>
         <div className="url">
         <p>{links.resumeLink}</p>
