@@ -4,20 +4,27 @@
   --text: darkseagreen;
   --toggle-bg: #f0eb9d;
   --toggle-fg: #ffd000;
-  --hover: 
+
 }
+
 body {
+  background-color: var(--primary);
+  color: var(--secondary);
   margin: 0px;
+  transition: background-color 0.25s ease-in-out;
+  padding-bottom: 50px
 }
+
 .App {
   width: 100%;
-  height: 100vh; /*Amount of screen it takes each vh is 1%.*/
+  min-height: 100vh; /*Amount of screen it takes each vh is 1%.*/
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: var(--primary);
   color: var(--secondary);
   transition: background-color 0.25s ease-in-out;
+  font-family: font-family system-ui, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; /*Uses the users OS fonts. got this from reddit*/
 }
 
 .links div {
@@ -28,13 +35,22 @@ body {
 .links a {
   color: var(--text);
   transition: background-color 0.25s ease-in-out;
+  text-decoration: none;
+}
 
+.links h1
+{
+  transition: color 0.25s ease-in-out;
+}
+
+.links p {
+  transition: color 0.25s ease-in-out;
 }
 
 [data-theme="dark"] {
   --primary: #222831;
-  --secondary: #696e73;
-  --text: #6134ab;
+  --secondary: #e4e4e4;
+  --text: #222831;
   --toggle-bg: #283452;
   --toggle-fg: #00a6ff;
 }

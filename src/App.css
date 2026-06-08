@@ -13,6 +13,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  transition: color 0.25s ease-in-out;
 }
 
 .links {
@@ -20,29 +21,109 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 60%; /*Div containing the all links divs is 60% of screen*/
+  width: 90%; /*Fits exactly around the biggest divs contents and applies to all*/
   margin: auto;
   margin-top: 10px;
+  gap: 20px;
+
 }
 
 .links div {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  height: 100px;
-  width: 100%; /*Divs inside of Links div take up 100% width*/
-  margin: 15px;
+  justify-content: flex-start;
+  height: fit-content;
+  width: 100%;
+  max-width: none;
+  overflow: hidden;
   border-radius: 10px;
-  
+  border-color: white;
+  margin: 0px;
 }
 
 .links h1 {
-  margin-right: auto;
+  font-size: 22px;
+  margin: 0px;
 }
 
 .links div:hover {
   filter: brightness(110%); /*brightens image 10% when hovered over.*/
   transform: scale(1.05);
   transition: transform 250ms;
+}
+
+.links div:active {
+  transform: scale(1.04);
+  transition: transform 250ms;
+}
+
+.links .container:hover{
+  transform: scale(1);
+  filter: brightness(100%);
+}
+
+.links .url:hover{
+  transform: scale(1);
+  filter: brightness(100%);
+} 
+
+.profile p {
+  width: 200px;
+  text-align: center;
+}
+
+.links a {
+  display: flex;
+  width: 600px;
+  max-width: 90%;
+  height: 80px;
+  margin: 0;
+  text-decoration: none;
+}
+
+.about {
+  margin: 0px;
+}
+
+.location {
+  font-style: italic;
+  font-size: 14px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  margin-right: auto;
+  margin-top: 1px;
+}
+
+.links2 {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.links2 p {
+  margin: 0px;
+  margin-right: 5px;
+  margin-left: 5px;;
+  font-size: 12px;
+  text-align: left;
+}
+
+.url {
+   overflow-wrap: anywhere;
+}
+
+.footer{
+  display: flex;
+  max-height: 50px;
+  width: 100%;
+  background-color: var(--secondary);
+  color: var(--primary) ;
+  justify-content: center;
+  margin-top: auto;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  gap: 50px;
 }
